@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<h1>Welcome to the welcome page</h1>
+
+<div th:each="item : ${items}">
+    <div class="item-preview" th:onclick="'window.location.href=\'/item?id=' + ${item.getId()} + '\''">
+        <h4 th:text="${item.getTitle()}">Title</h4>
+        <p><strong>Author:</strong> <span th:text="${item.getAuthor()}">Author</span>, <span th:text="${item.getTimestamp()}">Timestamp</span></p>
+        <p th:text="${item.getBody()}">Content preview here</p>
+        <p><strong>price:</strong> <span th:text="${item.getPrice()}">price</span></p>
+    </div>
+</div>
+<div class="center-button">
+    <a th:href="@{/createitem}" class="create-button">Create Item</a>
+</div>
+
+
+</body>
+</html>
