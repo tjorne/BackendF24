@@ -15,9 +15,9 @@ public class ConnectionPool
 {
     // TODO: Change default access credentials for MySql server as needed below:
     private static final String DEFAULT_USER = "postgres";
-    private static final String DEFAULT_PASSWORD = "postgres";
-    private static final String DEFAULT_URL = "jdbc:postgresql://localhost:5432/%s?currentSchema=public";
-    private static final String DEFAULT_DB = "backend";
+    private static final String DEFAULT_PASSWORD = "ab3m4d=glad";
+    private static final String DEFAULT_URL = "jdbc:postgresql://159.223.25.61:5432/%s?currentSchema=public";
+    private static final String DEFAULT_DB = "messageboard";
 
     public static ConnectionPool instance = null;
     public static HikariDataSource ds = null;

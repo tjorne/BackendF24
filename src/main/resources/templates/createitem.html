@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../public/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+    <form action="/submitItem" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" class="input-field" required><br>
+        <label for="body">Body:</label><br>
+        <textarea id="body" name="body" rows="10" class="text-area" required></textarea><br>
+        <input type="number" id="price" name="price" class="input-field" required><br>
+
+        <input type="submit" value="Submit" class="button submit-btn">
+        <button type="button" id="preview" class="button preview-btn">Preview</button>
+        <a href="javascript:void(0);" class="button discard-btn" onclick="confirmDiscard()">Discard</a>
+    </form>
+
+</div>
+</body>
+</html>
